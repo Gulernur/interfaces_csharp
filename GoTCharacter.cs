@@ -8,12 +8,12 @@ public class GoTCharacter : IHumanoid, IMagical
 
      string? IMagical.Element {get; set;}
 
-    public void CastSpell()
+     void IMagical.CastSpell()
     {
         Console.WriteLine("I can cast a spell"); 
     }
 
-    public void Talk()
+     void IHumanoid.Talk()
     {
         Console.WriteLine("I can talk");
     }

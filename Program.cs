@@ -7,9 +7,12 @@ namespace Interfaces
 
         public static void Main(String[] args)
         {
-            goTCharacter.Talk();
+            //Because the method is explicitly bound to this interfcae, the only way to call the method is to type cast it. 
+            IHumanoid ih = (IHumanoid) goTCharacter;
+            ih.Talk();
 
-            goTCharacter.CastSpell(); 
+            IMagical im = (IMagical) goTCharacter;
+            im.CastSpell(); 
         }
     }
 }
